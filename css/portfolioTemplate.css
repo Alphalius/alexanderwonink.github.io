@@ -157,3 +157,19 @@ body {
     transform: translateY(0);
     opacity: 1;
 }
+
+@media (orientation: portrait) {
+    .landingContent-reveal {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #examplesHeader {
+        font-size: 1em;
+    }
+    .siteExamples-reveal, .siteExamples-reveal > div {
+        display: flex;
+        flex-direction: column;
+    }
+}
