@@ -1,0 +1,159 @@
+/* General Config */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --palette-one: #FFFFFF;
+    --palette-two: #0066FF;
+    --palette-three: #FFAD05;
+    --palette-four: #F90093;
+}
+
+::selection {
+    background-color: var(--palette-one);
+    color: var(--palette-two);
+}
+
+body {
+    background-color: var(--palette-one);
+    color: var(--palette-one);
+    background-image: url('../img/circle-scatter.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position: fixed;
+    background-size: cover;
+}
+
+/* Navigation Bar */
+
+.navBar-reveal {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    padding: 25px 0px 25px 0px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.navBar-reveal>a {
+    text-decoration: none;
+    color: var(--palette-one);
+    text-transform: uppercase;
+    font-size: 1.25em;
+    font-weight: 600;
+    transition: all .3s;
+}
+
+.navBar-reveal>a:hover {
+    color: var(--palette-three);
+}
+
+/* Page Content */
+
+.landingContent-reveal {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: var(--palette-one);
+    padding: 50px 0px 25px 0px;
+    gap: 50px;
+}
+
+.landingText {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    padding: 25px;
+    width: 400px;
+    height: auto;
+}
+
+#landingHeader {
+    font-size: 1.25em;
+    font-weight: 600;
+    text-align: right;
+}
+
+#landingImg {
+    width: auto;
+    height: 500px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.siteExamples-reveal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 0px 25px 0px;
+}
+
+#examplesHeader {
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.siteExamples-reveal > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 25px;
+    gap: 25px;
+}
+
+.siteExamples-reveal > div > div {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border:1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    padding: 20px;
+}
+
+#exampleHeader {
+    font-size: 1.1em;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+#exampleImg {
+    width: auto;
+    height: 250px;
+    border-radius: 10px;
+}
+
+/* Show on Scroll */
+
+.hidden {
+    position: relative;
+    transform: translateX(150px);
+    opacity: 0;
+    transition: 1s all ease;
+}
+
+.hidden.active {
+    transform: translateY(0);
+    opacity: 1;
+}
